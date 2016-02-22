@@ -30,14 +30,6 @@ if( !function_exists( 'ripley_navigation' ) ) :
 
         <div class="site-navigation" id="site-navigation">
 
-            <a class="menu-toggle" id="menu-toggle">
-
-                <?php $menu_toggle_text = sprintf( '<span class="menu-toggle-text">%s</span>', __( 'Menu', 'ripley' ) ); ?>
-                <?php $menu_toggle_text = apply_filters( 'ripley_menu_toggle_text', $menu_toggle_text ); ?>
-                <?php echo $menu_toggle_text; ?>
-                <i class="fa fa-bars"></i>
-            </a>
-
             <?php wp_nav_menu( $args ); ?>
 
         </div>

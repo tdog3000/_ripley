@@ -33,8 +33,13 @@
 
     li {
 
-        display: inline-block;
+        display: block;
 
+        @include breakpoint( medium ) {
+
+            display: inline-block;
+
+        }
 
         a {
 

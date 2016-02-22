@@ -17,8 +17,6 @@
 
 .page {
 
-    @include grid-row();
-
     .entry-content {
 
         padding-bottom: $global-padding;

@@ -27,7 +27,7 @@ get_header(); ?>
                         <?php ripley_entry_before(); ?>
 
                             <!-- Post Entry Begin -->
-                            <?php get_template_part( 'template-parts/content', 'page' ); ?>
+                            <?php //get_template_part( 'template-parts/content', 'page' ); ?>
                             <!-- Post Entry End -->
 
                         <?php ripley_entry_after(); ?>

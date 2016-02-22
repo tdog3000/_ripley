@@ -8,6 +8,22 @@
  * @since 1.0.0
  */
 
+if( !function_exists( 'iw_footer_social' ) ) :
+
+    function iw_footer_social() { ?>
+
+        <div class="site-footer-social" style="padding: 1rem 0;">
+            <ul class="no-bullet text-center">
+                <li style="display:inline-block;padding: 0.5rem;"><a href=""><i class="fa fa-2x fa-twitter"></i></a></li>
+                <li style="display:inline-block;padding: 0.5rem;"><a href=""><i class="fa fa-2x fa-github"></i></a></li>
+            </ul>
+        </div>
+
+    <?php }
+
+endif;
+add_action( 'ripley_footer', 'iw_footer_social', 10 );
+
 if( !function_exists( 'iw_footer_widgets' ) ) :
 
     function iw_footer_widgets() { ?>
