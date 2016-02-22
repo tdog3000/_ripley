@@ -1,0 +1,28 @@
+a {
+
+    @include transition( 0.2s ease-in-out );
+
+    color: $primary-color;
+
+}
+
+.site-navigation {
+
+    a {
+
+        color: $secondary-color;
+        font-family: $header-font-family;
+        font-weight: $global-weight-bold;
+        text-transform: uppercase;
+
+        &:hover,
+        &:active,
+        &:focus {
+
+            color: $primary-color;
+
+        }
+
+    }
+
+}

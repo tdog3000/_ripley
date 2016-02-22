@@ -1,0 +1,57 @@
+.site-header {
+
+    @include transition( all 0.2s ease-in-out );
+
+    background: transparent;
+    width: 100%;
+    z-index: 9999;
+    padding: $global-padding;
+    padding-top: $global-padding*2;
+    font-size: 90%;
+
+    .content-inner {
+
+        display: table;
+        table-layout: fixed;
+        width: 100%
+
+    }
+
+    .site-branding,
+    .site-navigation {
+
+        display: table-cell;
+        vertical-align: middle;
+
+    }
+
+    .site-branding {
+
+        width: 10rem;
+
+    }
+
+    .site-navigation {
+
+        width: 75%;
+
+    }
+
+}
+
+.site-nav-arrow {
+
+    display: none;
+
+    @media screen and (min-height: 50em) {
+
+        @include transform( translateX( -50% ) );
+
+        display: block;
+        position: absolute;
+        bottom: 60px;
+        left: 50%;
+
+    }
+
+}

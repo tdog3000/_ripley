@@ -1,0 +1,28 @@
+.site-branding {
+
+    .site-title {
+
+        margin: 0;
+        font-size: 2rem;
+
+    }
+
+    a {
+
+        @include transform( translateZ(0) );
+        @include backface-visibility( hidden );
+
+        background-image: url( 'img/tom-napier.png' );
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left center;
+        display: block;
+
+        //Text Replacement
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+
+    }
+
+}

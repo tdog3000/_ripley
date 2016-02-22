@@ -1,0 +1,30 @@
+/*--------------------------------------------------------------
+## Color Schemes
+--------------------------------------------------------------*/
+//@import "color-mixins";
+
+.loader-overlay {
+
+    background-color: $black;
+
+}
+
+.has-background {
+
+    color: $white;
+
+    .button.primary {
+
+        background-color: $black !important;
+
+        &:hover,
+        &:active,
+        &:focus {
+
+            background-color: lighten( $black, 10% ) !important;
+
+        }
+
+    }
+
+}

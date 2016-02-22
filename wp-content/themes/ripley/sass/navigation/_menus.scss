@@ -1,0 +1,48 @@
+.main-navigation {
+
+    float: right;
+
+}
+
+.main-menu {
+
+    width: 100%;
+
+}
+
+.menu-toggle {
+
+    display: block;
+
+    @include breakpoint( medium ) {
+
+        display: none;
+
+    }
+
+}
+
+.site-navigation {
+
+    ul {
+
+        margin: 0 auto;
+        text-align: right;
+
+    }
+
+    li {
+
+        display: inline-block;
+
+
+        a {
+
+            display: block;
+            padding: $global-padding;
+
+        }
+
+    }
+
+}

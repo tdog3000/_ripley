@@ -1,0 +1,148 @@
+//Name: ( primary, secondary, body text, link, link:hover ),
+
+$colors: (
+
+  custom-background:      ( #FFFFFF, #F7F7F7, #474747, #3498DB, #217DBA ),
+  color-scheme-dark:      ( #1B1C1D, #252628, #ECF0F1, #BDA389, #D1BFAD ),
+  color-scheme-light:     ( #ECF0F1, #F7F7F7, #364549, #869198, #1B1C1D ),
+  color-scheme-pink:      ( #F18FB3, #D81B60, #FCE4EC, #FAD1DF, #FFFFFF ),
+
+) !default;
+
+@each $colors, $colorScheme in $colors {
+
+  $primary:    nth( $colorScheme, 1 );
+  $secondary:  nth( $colorScheme, 2 );
+  $body-color: nth( $colorScheme, 3 );
+  $link-color: nth( $colorScheme, 4 );
+  $link-hover: nth( $colorScheme, 5 );
+
+  body.#{$colors} {
+
+    background-color: $primary;
+    color: $body-color;
+
+    .content-two,
+    .content-three,
+    .content-four,
+    .content-five,
+    .content-six,
+    .content-columns,
+    .site-footer,
+    .loader-overlay {
+
+      background-color: $primary;
+
+    }
+
+    &.single,
+    &.archive {
+
+      .site-header {
+
+        color: $body-color;
+
+      }
+
+    }
+
+    .line-scale-pulse-out > div {
+      background-color: $link-color;
+    }
+
+    .line-effect {
+      background-color: $primary;
+    }
+
+
+    .navigation-links {
+
+      background-color: darken( $primary, 10% );
+
+      &.external-links {
+
+        background-color: $primary;
+
+      }
+
+    }
+
+    .menu-toggle {
+
+      color: $link-color;
+
+    }
+
+    .primary {
+
+      background-color: $secondary;
+
+    }
+
+    .button.primary {
+
+      background: $secondary;
+
+      &:hover,
+      &:active,
+      &:focus {
+
+        background: darken( $secondary, 10% );
+
+      }
+
+    }
+
+    a {
+
+      color: $link-color;
+
+      &:hover,
+      &:active,
+      &:focus {
+
+        color: $link-hover;
+
+      }
+
+    }
+
+    .hentry .entry-content {
+
+      a {
+
+        &:hover,
+        &:active,
+        &:focus {
+
+          background-color: $primary;
+
+        }
+
+      }
+
+      .entry-title a {
+
+        background-color: transparent;
+
+      }
+
+    }
+
+    hr {
+
+      border-color: $link-color;
+
+    }
+
+    blockquote,
+    blockquote p {
+
+      color: darken( $body-color, 25% );
+      border-color: darken( $body-color, 25% );
+
+    }
+
+  }
+
+}

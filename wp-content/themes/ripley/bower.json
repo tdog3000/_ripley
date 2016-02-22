@@ -1,0 +1,15 @@
+{
+  "name": "basepress",
+  "authors": [
+    "Tom Napier <tom@inkandwater.co.uk>"
+  ],
+  "description": "A starter theme for WordPress",
+  "license": "MIT",
+  "dependencies": {
+    "foundation-sites": "~6.0.1"
+  },
+  "devDependencies": {
+    "loaders.css": "~0.1.1",
+    "bourbon": "^4.2.6"
+  }
+}

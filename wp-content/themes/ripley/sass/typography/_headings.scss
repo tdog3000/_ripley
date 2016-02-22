@@ -1,0 +1,30 @@
+.content-secondary,
+.content-tertiary,
+.content-quarternary {
+
+    .widget-title {
+
+        margin-bottom: $global-padding*2;
+
+    }
+
+}
+
+.primary {
+
+    .archive-title {
+
+        padding: $global-padding*2 0;
+        margin: 0;
+
+    }
+
+}
+
+.archive-title {
+
+    font-weight: 100;
+    text-align: center;
+    text-transform: uppercase;
+
+}

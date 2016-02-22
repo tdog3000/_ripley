@@ -1,0 +1,44 @@
+.site-footer {
+
+    background-color: #F2F2F3;
+    color: $special-black;
+    padding: 0;
+    margin-top: $global-margin;
+
+    .site-footer-widgets {
+
+        padding: $global-padding*6 0;
+
+    }
+
+    .site-credits-wrapper {
+
+        background-color: #E4E4E7;
+        color: $special-black;
+
+        .site-credits {
+
+            @include grid-row();
+
+            margin-bottom: 0;
+            padding: $global-padding*1.5;
+            text-align: center;
+
+            li {
+
+                display: block;
+
+                @include breakpoint( large ) {
+
+                    display: inline-block;
+                    padding: 0 $global-padding;
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

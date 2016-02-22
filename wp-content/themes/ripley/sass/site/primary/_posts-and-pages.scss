@@ -1,0 +1,201 @@
+.single {
+
+    .site-main {
+
+        @include grid-row();
+
+    }
+
+    .content-area {
+
+        .hentry {
+
+            @include grid-column(12);
+
+            @include breakpoint(medium) {
+
+                @include grid-column(10);
+                @include grid-column-position(center);
+
+            }
+
+            @include breakpoint(large) {
+
+                @include grid-column(6);
+                @include grid-column-position(center);
+
+            }
+
+        }
+
+    }
+
+}
+
+.primary {
+
+    @include clearfix();
+
+}
+
+.posts {
+
+    @include clearfix();
+    @include grid-row;
+
+    position: relative;
+    padding: $global-padding*2 0;
+    list-style: none;
+    text-align: center;
+
+}
+
+.home {
+
+    .posts {
+
+        .post {
+
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            cursor: pointer;
+            padding: $global-padding;
+
+            @include breakpoint( medium ) {
+
+                float: none;
+                width: 50%;
+                display: inline-block;
+                margin: 0 -2px;
+
+            }
+
+            @include breakpoint(large) {
+
+                @include grid-column(4);
+
+                margin: 0;
+
+            }
+
+            .entry-title {
+
+                margin: 0;
+
+                .entry-date {
+
+                    color: inherit;
+                    display: block;
+                    padding: $global-padding 0 0 0;
+                    letter-spacing: 0.1rem;
+
+                }
+
+            }
+
+        }
+
+        figure {
+
+            margin: 0;
+            position: relative;
+
+        }
+
+        figcaption,
+        figcaption > a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Anchor will cover the whole item by default */
+        figcaption > a {
+            z-index: 1000;
+            text-indent: 200%;
+            white-space: nowrap;
+            font-size: 0;
+            opacity: 0;
+        }
+
+    }
+
+    figure {
+
+        img {
+
+            @include transform( translateZ( 0 ) );
+            @include transition( opacity 0.35s );
+
+            display: block;
+            position: relative;
+            opacity: 0.4;
+
+        }
+
+        figcaption {
+
+            @include backface-visibility( hidden );
+
+            padding: 1rem;
+
+            &:before,
+            &:after {
+
+                @include transition( opacity 0.35s, -webkit-transform 0.35s );
+
+                position: absolute;
+                top: $global-margin;
+                right: $global-margin;
+                bottom: $global-margin;
+                left: $global-margin;
+                content: '';
+                opacity: 0;
+                pointer-events: none;
+
+            }
+
+        }
+
+        .entry-title {
+
+            @include transform( translateY(-50%) );
+
+            top: 50%;
+            position: relative;
+
+        }
+
+    }
+
+    figure figcaption::before {
+
+        @include transform( scale(0,1) );
+
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+
+    }
+
+    figure figcaption::after {
+
+        @include transform( scale(1,0) );
+
+        border-right: 1px solid;
+        border-left: 1px solid;
+
+    }
+
+    figure:hover figcaption::before,
+    figure:hover figcaption::after {
+
+        @include transform( scale(1) );
+
+        opacity: 1;
+
+    }
+
+}

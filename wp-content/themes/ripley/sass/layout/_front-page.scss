@@ -1,0 +1,47 @@
+.home {
+
+    .page {
+
+        @include grid-row();
+
+        .entry-content {
+
+            padding-bottom: $global-padding;
+            padding-top: $global-padding;
+
+            @include grid-column(12);
+
+            @include breakpoint(medium) {
+
+                @include grid-column(10);
+                @include grid-column-position(center);
+
+            }
+
+            @include breakpoint(large) {
+
+                @include grid-column(6);
+                @include grid-column-position(center);
+
+            }
+
+        }
+
+        .entry-footer {
+
+            @include grid-row;
+
+            padding-bottom: $global-padding*2;
+            padding-top: $global-padding*2;
+
+        }
+
+    }
+
+    .post-archive-link {
+
+        text-align: center;
+
+    }
+
+}

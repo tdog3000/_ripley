@@ -1,0 +1,15 @@
+/* inkandwater.co.uk */
+/* humanstxt.org */
+
+/* TEAM */
+
+Name: Tom Napier
+Site: inkandwater.co.uk
+Twitter: @tomptimalmo
+Location: Sheffield, UK.
+
+/* SITE */
+
+Standards: HTML5, CSS3
+Components: Modernizr, jQuery, Sass, Foundation, Gulp.
+Software: Sublime Text 3
