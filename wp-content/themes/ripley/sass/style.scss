@@ -15,7 +15,7 @@ Text Domain:        ripley
 
 @import "foundation-settings";
 @import "foundation";
-//@import 'motion-ui';
+@import "motion-ui";
 
 @include foundation-global-styles;
 @include foundation-grid;

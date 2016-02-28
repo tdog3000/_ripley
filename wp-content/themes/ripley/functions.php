@@ -242,22 +242,12 @@ if( !function_exists( 'ripley_enqueue_scripts' ) ) :
     function ripley_enqueue_scripts() {
 
         wp_enqueue_script(
-            'fittext',
-            'https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js',
-            array( 'jquery' ),
-            null,
-            true
-        );
-
-        wp_enqueue_script(
-            'foundation',
+            'vendor',
             get_template_directory_uri() . '/js/vendor.min.js',
             array( 'jquery' ),
             null,
             true
         );
-
-        wp_enqueue_script( 'jquery-masonry' );
 
         wp_enqueue_script(
             'main',

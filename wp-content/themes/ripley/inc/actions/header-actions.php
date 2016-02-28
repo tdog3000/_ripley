@@ -8,9 +8,45 @@
  * @since 1.0.0
  */
 
+if( !function_exists( 'ripley_off_canvas' ) ) :
+
+    function ripley_off_canvas() { ?>
+
+        <div class="off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+            <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+                <ul class="menu vertical">
+                  <li><a href="#">One</a></li>
+                  <li><a href="#">Two</a></li>
+                  <li><a href="#">Three</a></li>
+                  <li><a href="#">Four</a></li>
+                </ul>
+            </div>
+
+    <?php }
+
+endif;
+add_action( 'ripley_before_container', 'ripley_off_canvas' );
+
+
+if( !function_exists( 'ripley_off_canvas_close' ) ) :
+
+    function ripley_off_canvas_close() { ?>
+
+            </div>
+        </div>
+
+    <?php }
+
+endif;
+add_action( 'ripley_after_container', 'ripley_off_canvas_close' );
+
+
 if( !function_exists( 'ripley_navigation' ) ) :
 
     function ripley_navigation() { ?>
+
+        <a type="button" class="button" data-open="offCanvasLeft"><i class="fa fa-bars"></i></a>
 
         <div class="site-branding" id="site-branding">
             <h1 class="site-title">

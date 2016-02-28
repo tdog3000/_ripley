@@ -12,16 +12,20 @@ get_header(); ?>
 
         <?php if ( have_posts() ) : ?>
 
-            <header class="page-header">
-                <div class="content-wrapper">
-                    <div class="content-inner">
+            <?php ripley_before_archive_header(); ?>
 
-                        <?php the_archive_title( '<h1 class="archive-title">', '</h1>' ); ?>
-                        <?php the_archive_description( '<div class="archive-description">', '</div>' ); ?>
+            <header class="archive-page-header">
 
-                    </div>
-                </div>
+                <?php ripley_before_archive_title(); ?>
+
+                    <?php the_archive_title( '<h1 class="archive-title">', '</h1>' ); ?>
+                    <?php the_archive_description( '<h6 class="archive-description"><small>', '</small></h6>' ); ?>
+
+                <?php ripley_after_archive_title(); ?>
+
             </header><!-- .page-header -->
+
+            <?php ripley_after_archive_header(); ?>
 
             <?php ripley_content_while_before(); ?>
 

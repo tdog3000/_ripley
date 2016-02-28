@@ -13,9 +13,9 @@
  * @package           TN_Portfolio
  *
  * @wordpress-plugin
- * Plugin Name:       TN-Portfolio
+ * Plugin Name:       Portfolio
  * Plugin URI:        http://tom-napier.co.uk/
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Adds a new post type 'Portfolio', with some metaboxes and stuff.
  * Version:           1.0.0
  * Author:            Tom Napier
  * Author URI:        http://tom-napier.co.uk/

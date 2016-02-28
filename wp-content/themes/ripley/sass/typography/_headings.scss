@@ -21,10 +21,21 @@
 
 }
 
-.archive-title {
+.archive {
 
-    font-weight: 100;
-    text-align: center;
-    text-transform: uppercase;
+    .archive-title {
+
+        font-weight: 100;
+        text-align: center;
+        text-transform: uppercase;
+
+    }
+
+    .entry-title {
+
+        margin-bottom: 0;
+        padding-bottom: 0;
+
+    }
 
 }

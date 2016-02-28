@@ -106,38 +106,6 @@
   });
 
   /**
-   * Enable masonry on masonry containers
-   * 
-   */
-
-  $(window).load(function(){
-
-    var $grid = $('.masonry-widgets').masonry({
-
-      // set itemSelector so .grid-sizer is not used in layout
-      itemSelector: 'aside',
-      columnWidth: '.grid-sizer',
-      percentPosition: true
-
-    });
-
-    // layout Masonry after each image loads
-    $grid.imagesLoaded().progress( function() {
-
-      $grid.masonry('layout');
-
-    });
-
-  });
-
-  /**
-   * Control the tagline with FitText.js
-   * 
-   */
-  $( '[data-responsive-tagline]' ).fitText( 1.2, { minFontSize: '25px', maxFontSize: '100px' } );
-
-
-  /**
    * Sticky Navigation
    * 
    * @see https://davidwalsh.name/javascript-debounce-function

@@ -5,6 +5,9 @@
  * 
  * @package ripley
  */
+
+$featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' )[0];
+
 ?>
 
 <?php if( is_front_page() ) : ?>
@@ -55,25 +58,26 @@
 
 <?php else : ?>
 
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-equalizer>
 
-        <header class="entry-header">
-
-            <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+        <header class="entry-header" style="background-image: url( <?php echo esc_attr( $featured_image ); ?> )" data-equalizer-watch>
 
         </header><!-- .entry-header -->
 
-        <div class="entry-content">
+        <div class="entry-content" data-equalizer-watch>
+
+            <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+            <?php printf( '<h5>%s</h5>', ripley_posted_on() ); ?>
 
             <?php the_excerpt(); ?>
 
+            <footer class="entry-footer">
+
+                <?php edit_post_link( __( 'Edit', 'ripley' ), '<span class="edit-link">', '</span>' ); ?>
+
+            </footer><!-- .entry-footer -->
+
         </div><!-- .entry-content -->
-
-        <footer class="entry-footer">
-
-            <?php edit_post_link( __( 'Edit', 'ripley' ), '<span class="edit-link">', '</span>' ); ?>
-
-        </footer><!-- .entry-footer -->
 
     </article><!-- #post-## -->
 

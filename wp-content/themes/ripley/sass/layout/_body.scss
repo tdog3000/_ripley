@@ -2,6 +2,14 @@ body {
 
 }
 
+.post-edit-link {
+
+    @include button(
+        $style: hollow
+    );
+
+}
+
 .content-wrapper {
 
     @include grid-row();

@@ -21,11 +21,11 @@
 
     <?php ripley_before_container(); ?>
 
-    <div class="hfeed site">
+    <div class="hfeed site off-canvas-content" data-off-canvas-content>
 
         <?php ripley_before_header(); ?>
 
-            <header class="site-header" role="banner">
+            <header class="site-header">
                 <div class="content-wrapper">
                     <div class="content-inner">
 

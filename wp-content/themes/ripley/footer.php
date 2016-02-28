@@ -24,6 +24,8 @@
 
 </div><!-- .page -->
 
+<?php ripley_after_container(); ?>
+
 <?php wp_footer(); ?>
 
 </body>
